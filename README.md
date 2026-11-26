@@ -36,3 +36,15 @@ Proyek simulasi administrasi sistem *end-to-end* pada lingkungan **Ubuntu 26.04.
 ![SSH & UFW Status](screenshots/1-ssh-ufw.png)
 ![Docker Container](screenshots/2-docker-web.png)
 ![Backup & Monitoring](screenshots/3-backup-monitoring.png)
+
+### 4. HTTPS & SSL/TLS Termination (Nginx + OpenSSL)
+- Membuat sertifikat SSL *self-signed* RSA 2048-bit menggunakan OpenSSL.
+- Mengonfigurasi Nginx untuk mengalihkan seluruh trafik HTTP (port 80) ke HTTPS (port 443) dengan protokol TLSv1.2 dan TLSv1.3.
+
+![HTTPS & SSL Verification](screenshots/4-https-ssl.png)
+
+### 5. Intrusion Prevention (Fail2Ban)
+- Mengaktifkan jail `sshd` pada Fail2Ban untuk memantau log autentikasi secara *real-time*.
+- Memblokir otomatis alamat IP selama 1 jam setelah 3 kali percobaan login gagal dalam rentang 10 menit.
+
+![Fail2Ban SSH Protection](screenshots/5-fail2ban-ssh.png)
